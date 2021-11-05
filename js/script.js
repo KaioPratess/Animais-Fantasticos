@@ -1,5 +1,5 @@
 import ScrollSuave from './scrollSuave.js';
-import initAccordion from './accordion.js';
+import Accordion from './accordion.js';
 import initTabNav from './initTabNav.js';
 import initModal from './modal.js';
 import initToolTip from './toolTip.js';
@@ -13,7 +13,9 @@ import initAnimaScroll from './scrollAnimado.js';
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
 
-initAccordion();
+const accordion = new Accordion('[data-anime="accordion"] dt');
+accordion.init();
+
 initTabNav();
 initModal();
 initToolTip();
