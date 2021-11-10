@@ -9,6 +9,7 @@ import Funcionamento from './funcionamento.js';
 import fetchAnimais from './animaisFetch.js';
 import fetchBitcoin from './fetchBitcoin.js';
 import ScrollAnima from './scrollAnima.js';
+import { SlideNav } from './slide.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -39,3 +40,8 @@ funcionamento.init();
 
 fetchAnimais('../animaisapi.json', '.numeros-grid');
 fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
+
+const slide = new SlideNav('.slide', '.slide-wrapper');
+slide.init();
+
+slide.addControl('.custom-control');
